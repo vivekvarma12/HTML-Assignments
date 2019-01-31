@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<link rel="icon" href="wipro.png" >
+<title>
+Xena Events
+</title>
+<style>
+table{
+border:2px solid black;
+}
+</style>
+<script>
+function validate(){
+var a=document.forms["form1"]["name"].value;
+var b=document.forms["form1"]["age"].value;
+var c=document.forms["form1"]["email"].value;
+var d=document.forms["form1"]["sel"].value;
+var c=0;
+a=a.trim();
+for(var i=0;i<a.length;i++){
+if(!(a.charAt(i)>='a' && a.charAt(i)<='z'||a.charAt(i)>='A' && a.charAt(i)<='Z'||a.charAt(i)==" ")){
+c++;
+break;
+}
+}
+if(a===""||b===""||c===""||d==="")
+alert("All Fields Are Mandatory");
+else if(c==1)
+alert("Should contains alphabets");
+else if(!(b>=18))
+alert("Age should be greater than  or equal to 18");
+}
+</script>
+</head>
+<body><br><br>
+
+<center>
+<h2 style="font-style:italic;">Xena Events Registration</h2>
+<form action="" onsubmit="return validate()" name="form1" method="post">
+Name:&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="name"><br><br>
+Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="age"><br><br>
+Email: &nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"><br><br>
+City : <select name="sel"><option>Rajkot</option><option>Vizag</option><option>Banglore</option></select><br><br>
+&nbsp;&nbsp;&nbsp;<input type="submit">
+</form>
+<center>
+</body>
+</html>

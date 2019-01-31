@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<title> Batting Stastics </title>
+<link rel="icon" href="wipro.png" >
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+
+      title:{
+      text: "Batting statistics of the Indian team for a T20 cricket match"
+      },
+      axisX: {
+        valueFormatString: "#th over",
+        interval:5,
+        intervalType: "5"
+      },
+      axisY:{
+		valueFormatString: "# runs"
+
+      },
+      data: [
+      {
+        type:  "line",
+
+        dataPoints: [
+        { x: 5, y: 40 },
+        { x: 10, y: 75},
+          { x: 15, y: 140},
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<body>
+<center><br>
+  <div id="chartContainer" style="height: 400px; width: 600px;">
+  </center>
+  </div>
+</body>
+</html>

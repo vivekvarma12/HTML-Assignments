@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="icon" href="wipro.png" >
+<title>Online Videos</title>
+<script>
+
+
+function play1(){
+var a=document.getElementById("video1");
+a.play();
+}
+function pause1(){
+var a=document.getElementById("video1");
+a.pause();
+}
+function play2(){
+var b=document.getElementById("video2");
+b.play();
+}
+function pause2(){
+var b=document.getElementById("video2");
+b.pause();
+}
+</script>
+<body style="background-color:lavender;">
+<div class="container">
+<center>
+<table>
+<tr><td><img src="giphy.gif" alt="videos" width="50px" height="50px"></td><td><h1 style="font-style:italic;">Awesome Online videos </h1></td></tr>
+</table>
+</center>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<center>
+<video id="video1" height="400px" width="500px">
+<source src="video1.mp4" type="video/mp4">
+<source src="video1.mp4" type="video/ogg">
+</video>
+</center>
+<center>
+<button class="btn btn-success" onclick="play1()">play</button>
+<button  class="btn btn-success" onclick="pause1()">Pause</button>
+</center>
+</div>
+<div class="col-sm-6">
+<center>
+<video id="video2" height="400px" width="500px">
+<source src="video1.mp4" type="video/mp4">
+<source src="video1.mp4" type="video/ogg">
+</video>
+</center>
+<center>
+<button class="btn btn-success" onclick="play2()">play</button>
+<button class="btn btn-success" onclick="pause2()">Pause</button>
+</center>
+</div>
+</div>
+</div>
+</body>
+</html>
